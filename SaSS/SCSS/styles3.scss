@@ -1,0 +1,12 @@
+p{
+    font: {
+        family: Ink Journal, Ink Free; /* Applies the family in sequence */
+        size: 18px;
+        weight: bold
+    }
+    text: {
+        align: center;
+        transform: lowercase;
+        overflow: hidden
+    }
+}

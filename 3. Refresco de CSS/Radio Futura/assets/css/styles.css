@@ -1,0 +1,73 @@
+body{
+    background-color: lightgray;
+}
+main{
+    border-top: 0.75vw outset white;
+    border-left: 0.75vw outset white;
+    border-right: 0.75vw outset black;
+    border-bottom: 0.75vw outset black;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.header{
+    margin: 2vw;
+}
+.titulo{
+    color: gray;
+    text-transform: uppercase;
+    margin: 0;
+}
+h1 span{
+    color: white;
+}
+h1 span:nth-child(odd){
+    color: black;
+}
+.parentesis{
+    color: black;
+    font-size: 125%;
+}
+.capital{
+    font-size: 125%;
+}
+hr{
+    height: 0.3vw;
+    border: 0px;
+    margin: 0px;
+    background-color: white;
+}
+.telecom{
+    background-color: white;
+    margin: 1.5vw;
+    margin-left: 7.5vw;
+    margin-right: 7.5vw;
+    border-right: 0.4vw solid black;
+    border-bottom: 0.25vw solid black;
+}
+.telecom::first-letter{
+    font-size: 200%;
+}
+.telecom:last-child{
+    margin-bottom: 10vw;
+}
+p{
+    margin-bottom: 0.3vw;
+}
+.telecom p:first-of-type{
+    margin: 0vw;
+    line-height: 0.7;
+}
+.doblesubrayado{
+    text-decoration: underline overline 0.2vw;
+    text-underline-offset: 0.25vw;
+    font-weight: bold;
+}
+.grisaceo{
+    background-color: lightgray;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 110%;
+    padding-left: 0.2vw;
+    padding-right: 0.2vw;
+}

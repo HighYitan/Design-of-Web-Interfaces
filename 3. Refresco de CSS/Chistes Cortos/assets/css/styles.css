@@ -1,0 +1,48 @@
+body{
+    background-color: red;
+    margin: 0vw;
+}
+main{
+    background-color: tomato;
+    padding-top: 1vw;
+    padding-bottom: 0.1vw;
+    margin-left: 7.5vw;
+    margin-right: 7.5vw;
+}
+.header{
+    margin-bottom: 2vw;
+}
+.titulo{
+    color:darkgreen;
+    text-align: center;
+    margin: 0vw;
+    text-transform: uppercase;
+    letter-spacing: 0.3vw;
+}
+.chiste{
+    background-color: lightpink;
+    margin-left: 7.5vw;
+    margin-right: 7.5vw;
+    margin-bottom: 1vw;
+    border: 5px solid;
+    border-radius: 50px;
+    border-color: darkred;
+}
+.chiste:nth-child(odd){
+    background-color: lightgreen;
+    border-color: darkgreen;
+}
+article:first-of-type p{
+    margin: 0;
+    margin-left: 1vw;
+}
+p{
+    margin: 1vw;
+    margin-bottom:0;
+}
+p:nth-child(odd){
+    margin-top:0;
+}
+p:last-child{
+    margin-top:1vw;
+}

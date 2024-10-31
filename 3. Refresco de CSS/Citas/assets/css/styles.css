@@ -1,0 +1,71 @@
+body{
+    background-color: lightgray;
+    margin: 0vw;
+}
+.header{
+    margin-bottom: 2vw;
+}
+.titulo{
+    color: gray;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0.5vw;
+}
+article{
+    background-color: tomato;
+    margin: 2.5vw;
+    padding: 0.2vw;
+    color: white;
+    font-weight: bold;
+}
+article:last-child{
+    margin-bottom: 1vw;
+}
+article .quote p{
+    color: gray;
+}
+article p{
+    margin-top: 1vw;
+    margin-bottom: 0.25vw;
+}
+.quote{
+    display: flex;
+}
+.quote p{
+    margin: 1.5vw;
+}
+.pink{
+    background-color: palevioletred;
+    text-align: center;
+}
+.pink .quote{
+    background-color: pink;
+    text-align: left;
+}
+.green{
+    background-color: seagreen;
+}
+.green p{
+    margin-left: 0.2vw;
+}
+.green .quote{
+    background-color: palegreen;
+}
+.green .quote p{
+    margin-left: 1.5vw;
+    text-align: left;
+}
+.blue{
+    background-color: blue;
+}
+.blue p{
+    text-align: right;
+    margin-right: 0.2vw;
+}
+.blue .quote{
+    background-color: lightblue;
+}
+.blue .quote p{
+    margin-right: 1.5vw;
+    text-align: left;
+}

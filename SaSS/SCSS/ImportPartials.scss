@@ -1,0 +1,7 @@
+@import "VariablesImport"; /* No file extension is required */
+body{
+    background-color: $mybgcolor;
+    font-family: $myFont;
+    font-size: $myFontSize;
+    color: $myColor;
+}

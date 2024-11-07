@@ -1,0 +1,41 @@
+@mixin important-text{
+    color: gray;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid blue;
+}
+.danger{
+    @include important-text;
+    background-color: white;
+}
+
+@mixin bordered($color, $width){
+    border: $color $width solid;
+}
+
+.myArticle{
+    @include bordered(blue, 1px); // Call mixin with two values
+}
+
+.myNotes{
+    @include bordered(red, 2px);
+}
+
+.button-basic{
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-report{
+    @extend .button-basic;
+    background-color: red;
+}
+
+.button-submit{
+    @extend .button-basic;
+    background-color: green;
+    color: white;
+}

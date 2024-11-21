@@ -11,46 +11,107 @@
         #rombo {
             clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);     
         }
+        #rombo img{
+            width: 300px;
+        }
+        a {
+            width: 300px;
+            height: 300px;
+        }
+        @media (max-width: 768px) {
+            a {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            a {
+                width: 148px;
+                height: 148px;
+            }
+        }
+        p{
+            /*font-size: 30px;
+            */
+            margin: 0;
+        }
+        body.bg-dark.bg-gradient {
+            background: linear-gradient(225deg, #700000, #000000) !important;
+        }
+        a.btn-info{
+            background: linear-gradient(225deg, #7000ff, #000000) !important;
+            border-color: #000000 !important;
+            transition: 0.5s !important;
+        }
+        a.btn-info:hover {
+            background: linear-gradient(225deg, #000000, #7000ff) !important;
+            border-color: #7000ff !important;
+        }
+        p.bi{
+            scale: 2;
+        }
+        a.bi{
+            font-size: 30px;
+            text-decoration: none !important;
+        }
     </style>
 </head>
-<body class="bg-dark">
+<body class="bg-dark bg-gradient">
     <div class="container-sm my-3">
         <header class="d-flex justify-content-center">
             <div id="rombo">
-                <img class="img-fluid" src="./assets/img/image_480.png" alt="foto" width="300px">
+                <img class="img-fluid" src="./assets/img/image_480.png" alt="foto">
             </div>
         </header>
-        <main class="container-sm my-3">
-            <p class="text-center text-white">Nombre: <span class="text-warning">Juan Pérez</span></p>
-            <div class="row mx-5 px-5 my-5">
-                <a class="col-sm btn btn-info px-5 mx-5 rounded-circle btn-sm" href="#">
-                    <p class="text-center text-white">Edad: <span class="text-warning">25 años</span></p>
-                </a>
-                <a class="col-sm btn btn-info px-5 mx-5 rounded-circle btn-sm" href="#">
-                    <p class="text-center text-white">Edad: <span class="text-warning">25 años</span></p>
-                </a>
+        <main class="my-3">
+            <div class="row my-4 justify-content-center">
+                <p class="text-center text-lg-start text-white">Nombre: <span class="text-warning">Juan Pérez</span>
+                    Some example text some example text. Some example text some example text.
+                    Some example text some example text. Some example text some example text. 
+                </p>
             </div>
-            <div class="row mx-5 px-5 my-5">
-                <div class="col-sm">
-                    <a class="btn btn-info rounded-pill btn-sm" href="#">
-                        <p class="text-center text-white">Some example text some example text. Some example text some example text.
-                            Some example text some example text. Some example text some example text. <span class="text-warning">25 años</span></p>
+            <div class="row my-4">
+                <div class="col d-flex justify-content-center">
+                    <a class="btn btn-info rounded-pill btn-sm d-flex flex-column align-items-center justify-content-center text-white" href="#">
+                        <p>Estudios académicos</p>
+                        <p class="bi bi-book"></p>
                     </a>
                 </div>
-                <div class="col-sm d-flex justify-content-center">
-                    <a class="btn btn-info rounded-circle btn-sm" href="#">
-                        <p class="text-center text-white">Edad: <span class="text-warning">25 años</span></p>
+                <div class="col d-flex justify-content-center">
+                    <a class="btn btn-info rounded-pill btn-sm d-flex flex-column align-items-center justify-content-center text-white" href="#">
+                        <p>Experiencia laboral</p>
+                        <p class="bi bi-book"></p>
                     </a>
                 </div>
             </div>
-            <a class="btn btn-info btn-circle btn-sm" href="#">
-                <p class="text-center text-white">Some example text some example text. Some example text some example text.
-                    Some example text some example text. Some example text some example text. <span class="text-warning">25 años</span></p>
-            </a>
+            <div class="row my-4">
+                <div class="col d-flex justify-content-center">
+                    <a class="btn btn-info rounded-pill btn-sm d-flex flex-column align-items-center justify-content-center text-white" href="#">
+                        <p>Habilidades y biografía</p>
+                        <p class="bi bi-book"></p>
+                    </a>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <a class="btn btn-info rounded-circle btn-sm d-flex flex-column align-items-center justify-content-center text-white" href="#">
+                        <p>Información de contacto</p>
+                        <p class="bi bi-book"></p>
+                    </a>
+                </div>
+            </div>
+            <!--<div class="col-sm d-flex justify-content-center">
+                <a class="btn btn-info btn-circle btn-sm" href="#">
+                    <p class="text-center text-white">Some example text some example text. Some example text some example text.
+                        Some example text some example text. Some example text some example text. <span class="text-warning">25 años</span></p>
+                </a>
+            </div>-->
         </main>
-        <footer class="container-sm my-3">
-    
+        <footer class="my-3">
+            <div class="row text-white text-center align-items-center">
+                <span class="col">© 2024 Fedora Team</span>
+                <a class="col bi bi-book link-light d-flex align-items-center justify-content-center" href="#"></a>
+            </div>
         </footer>
-    </div> 
+    </div>
 </body>
 </html>

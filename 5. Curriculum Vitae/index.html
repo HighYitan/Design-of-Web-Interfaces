@@ -85,13 +85,24 @@
             animation: spin 1s linear infinite;
             width: 50%;
         }
+        @media (max-width: 768px) {
+            .spin {
+                width: 70%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .spin {
+                width: 90%;
+            }
+        }
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function() { //Delay para ver animación de carga
             var loadingScreen = document.querySelector(".loadingScreen");
             window.addEventListener('load', function() {
                 setTimeout(function() {
@@ -150,7 +161,7 @@
         <footer class="row text-white text-center d-flex align-items-center mt-auto">
             <hr class="border border-light border-top border-3 my-0">
             <span class="col-8 col-md-6">© 2024 Fedora Team</span>
-            <a class="col-3 col-md-6 bi bi-github link-light d-flex align-items-center justify-content-center" style="height: 62px" href="#"></a>
+            <a class="col-3 col-md-6 bi bi-github link-light d-flex align-items-center justify-content-center" style="height: 62px" href="https://github.com/HighYitan"></a>
         </footer>
     </div>
 </body>

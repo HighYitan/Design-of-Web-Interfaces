@@ -43,6 +43,7 @@
         }
         .btn-group a:hover{
             background-color: #5000b8 !important;
+            color: white !important;
         }
         .dropdown-menu{
             background-color: #7000ff !important;
@@ -67,6 +68,17 @@
             animation: spin 1s linear infinite;
             width: 50%;
         }
+        @media (max-width: 768px) {
+            .spin {
+                width: 70%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .spin {
+                width: 90%;
+            }
+        }
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
@@ -79,7 +91,7 @@
         }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function() { //Delay para ver animación de carga
             var loadingScreen = document.querySelector(".loadingScreen");
             window.addEventListener('load', function() {
                 setTimeout(function() {
@@ -98,26 +110,26 @@
             <div class="row">
                 <div class="btn-group d-flex flex-column flex-sm-row" role="group" aria-label="Button group with nested dropdown">
                     <a href="index.html" class="btn btn-dark"><p class="bi bi-house-door-fill"></p></a>
-                    <a href="estudios.html" class="btn btn-dark">Estudios</a>
-                    <a href="experiencia.html" class="btn btn-dark active">Experiencia</a>
+                    <a href="estudios.html" class="btn btn-dark"><span class="bi bi-book px-1"></span>Estudios<span class="bi bi-book px-1"></span></a>
+                    <a href="experiencia.html" class="btn btn-dark active"><span class="bi bi-hammer px-1"></span>Experiencia<span class="bi bi-hammer px-1"></span></a>
                 
                     <div class="btn-group dropdown-center" role="group">
                         <a type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            Habilidades/Biografía
+                            <span class="bi bi-person-arms-up px-1"></span>Habilidades/Biografía<span class="bi bi-fingerprint px-1"></span>
                         </a>
                         <ul class="dropdown-menu bg-dark text-center">
                             <li><h6 class="dropdown-header text-white fs-4">Laboral</h6></li>
                             <li><hr class="dropdown-divider border-light"></li>
-                            <li><a class="dropdown-item text-secondary" href="habilidades.html">Habilidades</a></li>
+                            <li><a class="dropdown-item text-dark" href="habilidades.html"><span class="bi bi-person-arms-up px-1"></span>Habilidades<span class="bi bi-person-arms-up px-1"></span></a></li>
                             <li><hr class="dropdown-divider border-light"></li>
                             <li><h6 class="dropdown-header text-white fs-4">Personal</h6></li>
                             <li><hr class="dropdown-divider border-light"></li>
-                            <li><a class="dropdown-item text-secondary" href="biografia.html">Biografía</a></li>
-                            <li><a class="dropdown-item text-secondary" href="personalidad.html">Personalidad</a></li>
-                            <li><a class="dropdown-item text-secondary" href="aficiones.html">Aficiones</a></li>
+                            <li><a class="dropdown-item text-dark" href="biografia.html"><span class="bi bi-fingerprint px-1"></span>Biografía<span class="bi bi-fingerprint px-1"></span></a></li>
+                            <li><a class="dropdown-item text-dark" href="personalidad.html"><span class="bi bi-person-raised-hand px-1"></span>Personalidad<span class="bi bi-person-raised-hand px-1"></span></a></li>
+                            <li><a class="dropdown-item text-dark" href="aficiones.html"><span class="bi bi-joystick px-1"></span>Aficiones<span class="bi bi-joystick px-1"></span></a></li>
                         </ul>
                     </div>
-                    <a href="contacto.html" class="btn btn-dark">Contacto</a>
+                    <a href="contacto.html" class="btn btn-dark"><span class="bi bi-journal-bookmark-fill px-1"></span>Contacto<span class="bi bi-journal-bookmark-fill px-1"></span></a>
                 </div>
             </div>
             <div class="row mt-4">
@@ -209,7 +221,7 @@
         <footer class="row text-white text-center d-flex align-items-center mt-auto">
             <hr class="border border-light border-top border-3 my-0">
             <span class="col-8 col-md-6">© 2024 Fedora Team</span>
-            <a class="col-3 col-md-6 bi bi-github link-light d-flex align-items-center justify-content-center" style="height: 62px" href="#"></a>
+            <a class="col-3 col-md-6 bi bi-github link-light d-flex align-items-center justify-content-center" style="height: 62px" href="https://github.com/HighYitan"></a>
         </footer>
     </div>
 </body>

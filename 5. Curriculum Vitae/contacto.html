@@ -20,7 +20,6 @@
         p{
             margin: 0;
         }
-
         body.bg-dark.bg-gradient {
             background: linear-gradient(225deg, #700000, #000000) !important;
             height: 100%;
@@ -29,10 +28,13 @@
             background: linear-gradient(225deg, #700000, #000000) !important;
             height: 100%;
         }*/
-        .btn-group a{
+        a.btn-dark{
             background-color: #7000ff !important;
         }
-        .btn-group a.active{
+        a.btn-dark:hover{
+            background-color: #5000b8 !important;
+        }
+        a.btn-dark.active{
             background-color: #5000b8 !important;
         }
         button.btn-dark{
@@ -43,6 +45,7 @@
         }
         .btn-group a:hover{
             background-color: #5000b8 !important;
+            color: white !important;
         }
         .dropdown-menu{
             background-color: #7000ff !important;
@@ -67,6 +70,17 @@
             animation: spin 1s linear infinite;
             width: 50%;
         }
+        @media (max-width: 768px) {
+            .spin {
+                width: 70%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .spin {
+                width: 90%;
+            }
+        }
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
@@ -77,14 +91,18 @@
         .breadcrumb-item + .breadcrumb-item::before {
             color:white;
         }
+        a img{
+            width: 200px;
+            height: 100px;
+        }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function() { //Delay para ver animación de carga
             var loadingScreen = document.querySelector(".loadingScreen");
             window.addEventListener('load', function() {
                 setTimeout(function() {
                     loadingScreen.style.display = 'none';
-                }, 0); // 2000 milliseconds = 2 seconds
+                }, 2000); // 2000 milliseconds = 2 seconds
             });
         });
     </script>
@@ -98,119 +116,79 @@
             <div class="row">
                 <div class="btn-group d-flex flex-column flex-sm-row" role="group" aria-label="Button group with nested dropdown">
                     <a href="index.html" class="btn btn-dark"><p class="bi bi-house-door-fill"></p></a>
-                    <a href="estudios.html" class="btn btn-dark">Estudios</a>
-                    <a href="experiencia.html" class="btn btn-dark active">Experiencia</a>
+                    <a href="estudios.html" class="btn btn-dark"><span class="bi bi-book px-1"></span>Estudios<span class="bi bi-book px-1"></span></a>
+                    <a href="experiencia.html" class="btn btn-dark"><span class="bi bi-hammer px-1"></span>Experiencia<span class="bi bi-hammer px-1"></span></a>
                 
                     <div class="btn-group dropdown-center" role="group">
                         <a type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            Habilidades/Biografía
+                            <span class="bi bi-person-arms-up px-1"></span>Habilidades/Biografía<span class="bi bi-fingerprint px-1"></span>
                         </a>
                         <ul class="dropdown-menu bg-dark text-center">
                             <li><h6 class="dropdown-header text-white fs-4">Laboral</h6></li>
                             <li><hr class="dropdown-divider border-light"></li>
-                            <li><a class="dropdown-item text-secondary" href="habilidades.html">Habilidades</a></li>
+                            <li><a class="dropdown-item text-dark" href="habilidades.html"><span class="bi bi-person-arms-up px-1"></span>Habilidades<span class="bi bi-person-arms-up px-1"></span></a></li>
                             <li><hr class="dropdown-divider border-light"></li>
                             <li><h6 class="dropdown-header text-white fs-4">Personal</h6></li>
                             <li><hr class="dropdown-divider border-light"></li>
-                            <li><a class="dropdown-item text-secondary" href="biografia.html">Biografía</a></li>
-                            <li><a class="dropdown-item text-secondary" href="personalidad.html">Personalidad</a></li>
-                            <li><a class="dropdown-item text-secondary" href="aficiones.html">Aficiones</a></li>
+                            <li><a class="dropdown-item text-dark" href="biografia.html"><span class="bi bi-fingerprint px-1"></span>Biografía<span class="bi bi-fingerprint px-1"></span></a></li>
+                            <li><a class="dropdown-item text-dark" href="personalidad.html"><span class="bi bi-person-raised-hand px-1"></span>Personalidad<span class="bi bi-person-raised-hand px-1"></span></a></li>
+                            <li><a class="dropdown-item text-dark" href="aficiones.html"><span class="bi bi-joystick px-1"></span>Aficiones<span class="bi bi-joystick px-1"></span></a></li>
                         </ul>
                     </div>
-                    <a href="contacto.html" class="btn btn-dark">Contacto</a>
+                    <a href="contacto.html" class="btn btn-dark active"><span class="bi bi-journal-bookmark-fill px-1"></span>Contacto<span class="bi bi-journal-bookmark-fill px-1"></span></a>
                 </div>
             </div>
             <div class="row mt-4">
                 <nav class="divisor" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                         <li class="breadcrumb-item"><a href="index.html" style="color:#7000ff">Presentación</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Experiencia</li>
+                        <li class="breadcrumb-item active" aria-current="page">Contacto</li>
                     </ol>
                 </nav>
             </div>
             <div class="row text-white text-center">
-                <p class="bi bi-hammer my-3 fs-1"></p>
-                <h1>Experiencia Laboral</h1>
+                <p class="bi bi-journal-bookmark-fill my-3 fs-1"></p>
+                <h1>Información de Contacto</h1>
                 <hr class="border border-light border-top border-3 my-0">
             </div>
         </header>
         <main class="my-3">
-            <a href="mailto:cfl01@iesemilidarder.com" target="_blank" class="btn btn-primary">Email Us</a>
-            <div class="row my-3">
-                <div class="col-12 d-grid text-white text-center">
-                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#kitmaker" aria-expanded="false" aria-controls="kitmaker">
-                        Kitmaker
-                    </button>
-                    <div class="collapse" id="kitmaker">
-                        <div class="card bg-dark col-sm">
-                            <a href="https://x.com/kitmaker">
-                                <img src="./assets/img/kitmaker.jpg" class="card-img-top px-2" alt="Kitmaker">
-                            </a>
-                            <div class="card-body d-grid align-items-center justify-content-center">
-                                <p class="card-text text-white text-center"><span class="text-danger">Tipo de Empresa:</span> Vídeojuegos</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Roles desempeñados:</span>Trabajé como programador y sysadmin junior</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Tiempo trabajado:</span> 2016-2016 (Unos meses)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 d-grid text-white text-center">
-                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#antiguo" aria-expanded="false" aria-controls="antiguo">
-                        El Antiguo
-                    </button>
-                    <div class="collapse" id="antiguo">
-                        <div class="card bg-dark col-sm">
-                            <a href="https://archive.org/details/adolfhitlerthegreateststorynevertoldfull6hoursdocumentary_201909">
-                                <img src="./assets/img/antiguo.webp" class="card-img-top px-2" alt="El Antiguo">
-                            </a>
-                            <div class="card-body d-grid align-items-center justify-content-center">
-                                <p class="card-text text-white text-center"><span class="text-danger">Tipo de Empresa:</span> Culto y servidumbre eternos</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Roles desempeñados:</span> Nigromante y salvador de la humanidad por medio de las direcciones de El Antiguo</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Tiempo trabajado:</span> 2017-???? (Sigue en curso)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 d-grid text-white text-center">
-                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#jinroh" aria-expanded="false" aria-controls="jinroh">
-                        Jin-Roh
-                    </button>
-                    <div class="collapse" id="jinroh">
-                        <div class="card bg-dark col-sm">
-                            <a href="https://ca.wikipedia.org/wiki/Jin-Roh:_The_Wolf_Brigade">
-                                <img src="./assets/img/Jin_Roh.jpg" class="card-img-top px-2" alt="Jin-Roh">
-                            </a>
-                            <div class="card-body d-grid align-items-center justify-content-center">
-                                <p class="card-text text-white text-center"><span class="text-danger">Tipo de Empresa:</span> Organización paramilitar</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Roles desempeñados:</span> Purgador de disidencia en la Brigada del Lobo e Inteligencia</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Tiempo trabajado:</span> 2019-20?? (Sigue en curso)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 d-grid text-white text-center">
-                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#shinmegamitensei" aria-expanded="false" aria-controls="shinmegamitensei">
-                        DDS-Net
-                    </button>
-                    <div class="collapse" id="shinmegamitensei">
-                        <div class="card bg-dark col-sm">
-                            <a href="https://ca.wikipedia.org/wiki/Jin-Roh:_The_Wolf_Brigade">
-                                <img src="./assets/img/shinmegamitensei.jpg" class="card-img-top px-2" alt="Jin-Roh">
-                            </a>
-                            <div class="card-body d-grid align-items-center justify-content-center">
-                                <p class="card-text text-white text-center"><span class="text-danger">Tipo de Empresa:</span> Aplicaciones de Invocación Demoníaca</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Roles desempeñados:</span> Invocador de demonios para salvar el mundo de su invasión, guerrero, programador</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Tiempo trabajado:</span> 2020-21?? (Sigue en curso)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row text-white text-center my-2">
+                <h3>Puedes contactarme a través de los siguientes medios</h3>
+            </div>
+            <div class="d-grid row gap-2 d-md-flex my-3 mx-1">
+                <a href="mailto:cfl01@iesemilidarder.com" class="btn btn-dark col d-flex align-items-center justify-content-center">Envíame un correo electrónico</a>
+                <a class="btn btn-dark col d-flex align-items-center justify-content-center" href="tel:713-992-0916">
+                    Llamar<span class="bi bi-telephone-inbound-fill" style="padding-left:10px; padding-right:10px;"></span>+34 666 333 999
+                </a>
+                <a class="btn btn-dark col" href="https://www.linkedin.com/">
+                    <img src="./assets/img/linkedin.png" class="img-fluid px-2" alt="Mi LinkedIn">
+                </a>
+            </div>
+            <div class="row text-white text-center mt-4 mb-3">
+                <h3>¡También puedes mandarme un mensaje directo a mi correo personal rellenando el siguiente formulario!</h3>
+            </div>
+            <div class="my-3">
+                <label for="nombre" class="form-label text-white">Nombre/Empresa</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Máximo Red">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label text-white">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="ejemplo@protonmail.com">
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label text-white">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="5" placeholder="Hola, quería contactarle porque..."></textarea>
+            </div>
+            <div class="d-grid mb-3">
+                <button type="submit" class="btn btn-dark" onclick="document.getElementById('rickroll').play()">Enviar mensaje</button>
+                <audio id="rickroll" src="./assets/audio/Rick Astley - Never Gonna Give You Up (Official Music Video).mp3"></audio>
             </div>
         </main>
         <footer class="row text-white text-center d-flex align-items-center mt-auto">
             <hr class="border border-light border-top border-3 my-0">
             <span class="col-8 col-md-6">© 2024 Fedora Team</span>
-            <a class="col-3 col-md-6 bi bi-github link-light d-flex align-items-center justify-content-center" style="height: 62px" href="#"></a>
+            <a class="col-3 col-md-6 bi bi-github link-light d-flex align-items-center justify-content-center" style="height: 62px" href="https://github.com/HighYitan"></a>
         </footer>
     </div>
 </body>

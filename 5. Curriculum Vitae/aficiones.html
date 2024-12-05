@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap" rel="stylesheet">
-    <title>Curriculum Vitae - Experiencia</title>
+    <title>Curriculum Vitae - Aficiones</title>
     <style>
         *{
             font-family: 'Germania One', sans-serif;
@@ -20,15 +20,17 @@
         p{
             margin: 0;
         }
-
         body.bg-dark.bg-gradient {
             background: linear-gradient(225deg, #700000, #000000) !important;
             height: 100%;
         }
-        .btn-group a{
+        a.btn-dark{
             background-color: #7000ff !important;
         }
-        .btn-group a.active{
+        a.btn-dark:hover{
+            background-color: #5000b8 !important;
+        }
+        a.btn-dark.active{
             background-color: #5000b8 !important;
         }
         button.btn-dark{
@@ -43,6 +45,9 @@
         }
         .dropdown-menu{
             background-color: #7000ff !important;
+        }
+        .dropdown-item.text-white.active{
+            background-color: #5000b8 !important;
         }
         a.bi{
             font-size: 30px;
@@ -69,7 +74,6 @@
                 width: 70%;
             }
         }
-
         @media (max-width: 576px) {
             .spin {
                 width: 90%;
@@ -84,6 +88,23 @@
         }
         .breadcrumb-item + .breadcrumb-item::before {
             color:white;
+        }
+        .nav-link.active{
+            color: #000000 !important;
+        }
+        .accordion-item{
+            border-color: black;
+        }
+        .accordion-header{
+            border-color: black !important;
+        }
+        .accordion-button{
+            background-color: #7000ff !important;
+            border-color: black !important;
+        }
+        .accordion-button:hover{
+            background-color: #5000b8 !important;
+            border-color: #7000ff !important;
         }
     </style>
     <script>
@@ -107,7 +128,7 @@
                 <div class="btn-group d-flex flex-column flex-sm-row" role="group" aria-label="Button group with nested dropdown">
                     <a href="index.html" class="btn btn-dark"><p class="bi bi-house-door-fill"></p></a>
                     <a href="estudios.html" class="btn btn-dark"><span class="bi bi-book px-1"></span>Estudios<span class="bi bi-book px-1"></span></a>
-                    <a href="experiencia.html" class="btn btn-dark active"><span class="bi bi-hammer px-1"></span>Experiencia<span class="bi bi-hammer px-1"></span></a>
+                    <a href="experiencia.html" class="btn btn-dark"><span class="bi bi-hammer px-1"></span>Experiencia<span class="bi bi-hammer px-1"></span></a>
                 
                     <div class="btn-group dropdown-center" role="group">
                         <a href="" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -122,7 +143,7 @@
                             <li><hr class="dropdown-divider border-light"></li>
                             <li><a class="dropdown-item text-dark" href="biografia.html"><span class="bi bi-fingerprint px-1"></span>Biografía<span class="bi bi-fingerprint px-1"></span></a></li>
                             <li><a class="dropdown-item text-dark" href="personalidad.html"><span class="bi bi-person-raised-hand px-1"></span>Personalidad<span class="bi bi-person-raised-hand px-1"></span></a></li>
-                            <li><a class="dropdown-item text-dark" href="aficiones.html"><span class="bi bi-joystick px-1"></span>Aficiones<span class="bi bi-joystick px-1"></span></a></li>
+                            <li><a class="dropdown-item text-white active" href="aficiones.html"><span class="bi bi-joystick px-1"></span>Aficiones<span class="bi bi-joystick px-1"></span></a></li>
                         </ul>
                     </div>
                     <a href="contacto.html" class="btn btn-dark"><span class="bi bi-journal-bookmark-fill px-1"></span>Contacto<span class="bi bi-journal-bookmark-fill px-1"></span></a>
@@ -132,83 +153,77 @@
                 <nav class="divisor" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                         <li class="breadcrumb-item"><a href="index.html" style="color:#7000ff">Presentación</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Experiencia</li>
+                        <li class="breadcrumb-item active" aria-current="page">Aficiones</li>
                     </ol>
                 </nav>
             </div>
             <div class="row text-white text-center">
-                <p class="bi bi-hammer my-3 fs-1"></p>
-                <h1>Experiencia Laboral</h1>
+                <p class="bi bi-joystick my-3 fs-1"></p>
+                <h1>Aficiones personales</h1>
                 <hr class="border border-light border-top border-3 my-0">
             </div>
         </header>
         <main class="my-3">
-            <div class="row my-3">
-                <div class="col-12 d-grid text-white text-center">
-                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#kitmaker" aria-expanded="false" aria-controls="kitmaker">
-                        Kitmaker
-                    </button>
-                    <div class="collapse" id="kitmaker">
-                        <div class="card bg-dark col-sm">
-                            <a href="https://x.com/kitmaker">
-                                <img src="./assets/img/kitmaker.jpg" class="card-img-top px-2" alt="Kitmaker">
-                            </a>
-                            <div class="card-body d-grid align-items-center justify-content-center">
-                                <p class="card-text text-white text-center"><span class="text-danger">Tipo de Empresa:</span> Vídeojuegos</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Roles desempeñados:</span>Trabajé como programador y sysadmin junior</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Tiempo trabajado:</span> 2016-2016 (Unos meses)</p>
-                            </div>
+            <div class="text-white text-center my-2">
+                <div class="accordion" id="acordeon">
+                    <div class="accordion-item bg-dark text-white">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Vídeojuegos
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#acordeon">
+                        <div class="accordion-body">
+                            Esto no es ninguna sorpresa ya que literalmente empecé desde que tenía 3 años y apenas uso de razón, lo cierto es que uno de mis objetivos en la vida es crear un juego del que pueda estar orgulloso y pueda decir que es un buen juego, quizás lo haga como proyecto personal o como proyecto conjunto en una empresa privada, quién sabe.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item bg-dark text-white">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Cantar
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#acordeon">
+                        <div class="accordion-body">
+                            Desde que empecé a tener gusto por la música he intentado cantar, aprendiendo poco a poco mientras lo hacía y aunque no soy el mejor (Simplemente se me da bastante bien) si que soy capaz de utilizar ciertas técnicas para entonar la voz de manera monstruosa y gutural lo cual viene bien para cantar cierto tipo de canciones. Esto también me ha dado cierta habilidad para el doblaje ya que no se me da mal imitar voces o cambiar tonos de forma rápida o utilizar tonos intensos.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item bg-dark text-white">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Aprender
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#acordeon">
+                        <div class="accordion-body">
+                            Muchos de los momentos en los que no tengo nada que hacer o algo interesante que capte mi atención me dedico al estudio autodidacta ya que adoro la sensación de aprender algo nuevo y me hace sentir genial. Es una afición que me otorga la cualidad de ser polifacético ya que me otorga muchas habilidades/conocimientos.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item bg-dark text-white">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Observar las estrellas
+                          </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#acordeon">
+                          <div class="accordion-body">
+                            De vez en cuando me gusta salir a la calle en la oscuridad de la noche y mirar al cielo y sus bellas estrellas lo cual me relaja y me permite pensar con claridad cuales deberían ser mis próximos objetivos y como seguir adelante con ellos.
+                          </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 d-grid text-white text-center">
-                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#antiguo" aria-expanded="false" aria-controls="antiguo">
-                        El Antiguo
-                    </button>
-                    <div class="collapse" id="antiguo">
-                        <div class="card bg-dark col-sm">
-                            <a href="https://archive.org/details/adolfhitlerthegreateststorynevertoldfull6hoursdocumentary_201909">
-                                <img src="./assets/img/antiguo.webp" class="card-img-top px-2" alt="El Antiguo">
-                            </a>
-                            <div class="card-body d-grid align-items-center justify-content-center">
-                                <p class="card-text text-white text-center"><span class="text-danger">Tipo de Empresa:</span> Culto y servidumbre eternos</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Roles desempeñados:</span> Nigromante y salvador de la humanidad por medio de las direcciones de El Antiguo</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Tiempo trabajado:</span> 2017-???? (Sigue en curso)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 d-grid text-white text-center">
-                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#jinroh" aria-expanded="false" aria-controls="jinroh">
-                        Jin-Roh
-                    </button>
-                    <div class="collapse" id="jinroh">
-                        <div class="card bg-dark col-sm">
-                            <a href="https://ca.wikipedia.org/wiki/Jin-Roh:_The_Wolf_Brigade">
-                                <img src="./assets/img/Jin_Roh.jpg" class="card-img-top px-2" alt="Jin-Roh">
-                            </a>
-                            <div class="card-body d-grid align-items-center justify-content-center">
-                                <p class="card-text text-white text-center"><span class="text-danger">Tipo de Empresa:</span> Organización paramilitar</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Roles desempeñados:</span> Purgador de disidencia en la Brigada del Lobo e Inteligencia</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Tiempo trabajado:</span> 2019-20?? (Sigue en curso)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 d-grid text-white text-center">
-                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#shinmegamitensei" aria-expanded="false" aria-controls="shinmegamitensei">
-                        DDS-Net
-                    </button>
-                    <div class="collapse" id="shinmegamitensei">
-                        <div class="card bg-dark col-sm">
-                            <a href="https://ca.wikipedia.org/wiki/Jin-Roh:_The_Wolf_Brigade">
-                                <img src="./assets/img/shinmegamitensei.jpg" class="card-img-top px-2" alt="Jin-Roh">
-                            </a>
-                            <div class="card-body d-grid align-items-center justify-content-center">
-                                <p class="card-text text-white text-center"><span class="text-danger">Tipo de Empresa:</span> Aplicaciones de Invocación Demoníaca</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Roles desempeñados:</span> Invocador de demonios para salvar el mundo de su invasión, guerrero, programador</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Tiempo trabajado:</span> 2020-21?? (Sigue en curso)</p>
-                            </div>
+                    <div class="accordion-item bg-dark text-white">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Investigar
+                          </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#acordeon">
+                          <div class="accordion-body">
+                            Cuando tengo tiempo para ello me gusta investigar como funciona el mundo y qué se halla más allá de lo que se encuentra a simple vista, ya sean los mensajes ocultos, los patrones de actuación de ciertos grupos, la simbología y en general el significado detrás de ciertas cosas que aunque no les demos importancia en el fondo si la tiene ya que cada símbolo, acto o patrón tienen su significado.
+                          </div>
                         </div>
                     </div>
                 </div>

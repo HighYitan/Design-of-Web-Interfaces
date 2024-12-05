@@ -100,9 +100,6 @@
             background-color: #5000b8 !important;
             border-color: #7000ff !important;
         }
-        /*.list-group{
-            position: fixed;
-        }*/
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() { //Delay para ver animación de carga
@@ -110,7 +107,7 @@
             window.addEventListener('load', function() {
                 setTimeout(function() {
                     loadingScreen.style.display = 'none';
-                }, 0); // 2000 milliseconds = 2 seconds
+                }, 2000); // 2000 milliseconds = 2 seconds
             });
         });
     </script>
@@ -128,7 +125,7 @@
                     <a href="experiencia.html" class="btn btn-dark"><span class="bi bi-hammer px-1"></span>Experiencia<span class="bi bi-hammer px-1"></span></a>
                 
                     <div class="btn-group dropdown-center" role="group">
-                        <a type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="bi bi-person-arms-up px-1"></span>Habilidades/Biografía<span class="bi bi-fingerprint px-1"></span>
                         </a>
                         <ul class="dropdown-menu bg-dark text-center">
@@ -164,23 +161,23 @@
             <div class="text-white text-center my-2">
                 <div class="row">
                     <div class="col-4">
-                      <div id="list-example" class="list-group">
-                        <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-                        <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
-                        <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-                        <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+                      <div id="listing" class="list-group">
+                        <a class="list-group-item list-group-item-action px-0" href="#list-item-1">Impasibilidad</a>
+                        <a class="list-group-item list-group-item-action px-0" href="#list-item-2">Amabilidad</a>
+                        <a class="list-group-item list-group-item-action px-0" href="#list-item-3">Competitivo</a>
+                        <a class="list-group-item list-group-item-action px-0" href="#list-item-4">Honorable</a>
                       </div>
                     </div>
                     <div class="col-8">
-                      <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0" style="height: 300px; overflow-y: auto;">
-                        <h4 id="list-item-1">Item 1</h4>
-                        <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-                        <h4 id="list-item-2">Item 2</h4>
-                        <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-                        <h4 id="list-item-3">Item 3</h4>
-                        <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-                        <h4 id="list-item-4">Item 4</h4>
-                        <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+                      <div data-bs-spy="scroll" data-bs-target="#listing" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0" style="height: 300px; overflow-y: auto;">
+                        <h2 id="list-item-1">Impasibilidad</h2>
+                        <p class="mt-5">Suelo ser indiferente e imperturbable ante cualquier cosa a menos que activamente quiera dejar de serlo, tengo un gran control sobre mi mismo. Me gusta la paz y la tranquilidad por sobre todas las cosas.</p>
+                        <h2 id="list-item-2" class="mt-5">Amabilidad</h2>
+                        <p class="mt-5">Siempre trato de ver el mejor lado de los demás y ayudar cuando realmente puedo permitírmelo a mi mismo pero sin dejar que se aprovechen de mi ni de quienes me rodean por ser demasiado amables.</p>
+                        <h2 id="list-item-3" class="mt-5">Competitivo</h2>
+                        <p class="mt-5">Es una de las razones de mi perfeccionismo, siempre me ha gustado ser el mejor en todo lo que hago a ser posible aunque me lleve más tiempo y esfuerzo que a los demás siempre puedo intentar hacerlo mejor.</p>
+                        <h2 id="list-item-4" class="mt-5">Honorable</h2>
+                        <p class="mt-5">Nunca me ha gustado jugar sucio o ganar con ventajas injustas a los demás, me gusta el juego limpio y con honor ya que tener valores morales no tiene precio, desde luego los míos no, no puedo ser comprado por tanto puedo decir que soy alguien de fiar en cualquier situación.</p>
                       </div>
                     </div>
                 </div>

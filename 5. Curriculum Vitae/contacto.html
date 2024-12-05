@@ -24,10 +24,6 @@
             background: linear-gradient(225deg, #700000, #000000) !important;
             height: 100%;
         }
-        /*html{
-            background: linear-gradient(225deg, #700000, #000000) !important;
-            height: 100%;
-        }*/
         a.btn-dark{
             background-color: #7000ff !important;
         }
@@ -120,7 +116,7 @@
                     <a href="experiencia.html" class="btn btn-dark"><span class="bi bi-hammer px-1"></span>Experiencia<span class="bi bi-hammer px-1"></span></a>
                 
                     <div class="btn-group dropdown-center" role="group">
-                        <a type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="bi bi-person-arms-up px-1"></span>Habilidades/Biografía<span class="bi bi-fingerprint px-1"></span>
                         </a>
                         <ul class="dropdown-menu bg-dark text-center">
@@ -181,8 +177,26 @@
                 <textarea class="form-control" id="mensaje" rows="5" placeholder="Hola, quería contactarle porque..."></textarea>
             </div>
             <div class="d-grid mb-3">
-                <button type="submit" class="btn btn-dark" onclick="document.getElementById('rickroll').play()">Enviar mensaje</button>
-                <audio id="rickroll" src="./assets/audio/Rick Astley - Never Gonna Give You Up (Official Music Video).mp3"></audio>
+                <button type="submit" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#rickrolled" onclick="document.getElementById('rickroll').play();">Enviar mensaje</button>
+                <audio id="rickroll" src="./assets/audio/Rick-Astley-Never-Gonna-Give-You-Up(Official-Music-Video).mp3"></audio>
+            </div>
+            <div class="modal fade" id="rickrolled" tabindex="-1" aria-labelledby="rickrolledLabel" aria-hidden="true">
+                <div class="modal-dialog text-white">
+                    <div class="modal-dialog">
+                        <div class="modal-content bg-dark">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="rickrolledLabel">Rickrolleado</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Has sido Rickrolleado, caíste en mi trampa, ¡Já!
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                            </div>
+                        </div>
+                    </div>
+              </div>
             </div>
         </main>
         <footer class="row text-white text-center d-flex align-items-center mt-auto">
